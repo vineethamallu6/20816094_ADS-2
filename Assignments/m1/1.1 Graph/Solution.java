@@ -167,12 +167,15 @@ class GraphADT implements Graph{
      *
      * @throws     Exception  { exception_description }.
      */
-public void listDisplay(final int v1, final int e1, final String[] tokens) throws Exception {
+public void listDisplay(final int v1, final int e1,
+    final String[] tokens) throws Exception {
     if (e1 <= 1 && v1 <= 1) {
-        System.out.println(vertices() + " vertices" + ", " + edges() + " edges");
+        System.out.println(vertices() + " vertices" + ", "
+            + edges() + " edges");
         throw new Exception("No edges");
     } else {
-        System.out.println(vertices() + " vertices" + ", " + edges() + " edges");
+        System.out.println(vertices() + " vertices" + ", "
+            + edges() + " edges");
         for (int i = 0; i < tokens.length; i++) {
             String str = "";
             str = tokens[i] + ": ";
