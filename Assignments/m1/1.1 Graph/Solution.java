@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 interface Graph {
     public int V();
     public int E();
@@ -7,14 +6,6 @@ interface Graph {
     public Iterable<Integer> adj(int v);
     public boolean hasEdge(int v, int w);
 }
-//
-//class Graph {
-// 	private final int V;
-//     private int E;
-// 	Graph() {
-
-// 	}
-// }
 class GraphADT implements Graph{
     private int v;
     private int e;
@@ -25,9 +16,9 @@ class GraphADT implements Graph{
     GraphADT(int v1) {
         this.v = v1;
         this.e = 0;
-        adj = (Bag<Integer>[]) new Bag[v];
+        adj = (Bag<Integer>[]) new Bag[v1];
         for (int i = 0; i < v; i++) {
-            adj[v] = new Bag<Integer>();
+            adj[i] = new Bag<Integer>();
         }
     }
     public int V() {
@@ -36,6 +27,15 @@ class GraphADT implements Graph{
 
     public int E() {
         return e;
+    }
+     public int vertices() {
+        return v;
+    }
+     public int edges() {
+        return e;
+    }
+    public Bag<Integer>[] getadj() {
+        return adj;
     }
     public void addEdge(int v, int w) {
     	if (v == w) {
@@ -60,10 +60,10 @@ class GraphADT implements Graph{
     }
 public void listDisplay(final int v1, final int e1, final String[] tokens) throws Exception {
 	if (e1 <= 1 && v1 <= 1) {
-		System.out.println(V() + " vertices" + ", " + E() + " edges");
+		System.out.println(vertices() + " vertices" + ", " + edges() + " edges");
 		throw new Exception("No edges");
 	} else {
-		System.out.println(V() + " vertices" + ", " + E() + "edges");
+		System.out.println(vertices() + " vertices" + ", " + edges() + "edges");
 		for (int i = 0; i < tokens.length; i++) {
 			String str = "";
 			str = tokens[i] + ": ";
@@ -77,12 +77,12 @@ public void listDisplay(final int v1, final int e1, final String[] tokens) throw
 }
 public void matrixDisplay(final int v1, final int e1) throws Exception {
         if (e1 <= 1 && v1 <= 1) {
-            System.out.println(V() + " vertices" + ", "
-                + E() + " edges");
+            System.out.println(vertices() + " vertices" + ", "
+                + edges() + " edges");
             throw new Exception("No edges");
         } else {
-            System.out.println(V() + " vertices" + ", "
-                + E() + " edges");
+            System.out.println(vertices() + " vertices" + ", "
+                + edges() + " edges");
             int[][] display = new int[v1][v1];
             for (int i = 0; i  < v1; i++) {
                 for (int j = 0; j < v1; j++) {
@@ -117,7 +117,7 @@ class Solution {
 		// }
 
 		String[] line = scan.nextLine().split(",");
-		System.out.println(Arrays.toString(line));
+		//System.out.println(Arrays.toString(line));
 		gd = new GraphADT(vertices);
 		for (int i = 0; i < edges; i++) {
 			String[] tokens = scan.nextLine().split(" ");
