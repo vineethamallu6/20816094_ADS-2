@@ -119,39 +119,39 @@ class GraphADT implements Graph{
     /**
      * Adds an edge.
      *
-     * @param      v     { parameter_description }.
+     * @param      v1     { parameter_description }.
      * @param      w     { parameter_description }.
      */
-    public void addEdge(final int v, final int w) {
-        if (v == w) {
+    public void addEdge(final int v1, final int w) {
+        if (v1 == w) {
             return;
         }
-        if (!hasEdge(v, w)) {
+        if (!hasEdge(v1, w)) {
             e++;
         }
-        adj[v].add(w);
-        adj[w].add(v);
+        adj[v1].add(w);
+        adj[w].add(v1);
     }
     /**
      * { function_description }.
      *
-     * @param      v     { parameter_description }.
+     * @param      v1     { parameter_description }.
      *
      * @return     { description_of_the_return_value }.
      */
-    public Iterable<Integer> adj(final int v) {
-        return adj[v];
+    public Iterable<Integer> adj(final int v1) {
+        return adj[v1];
     }
     /**
      * Determines if it has edge.
      *
-     * @param      v     { parameter_description }.
+     * @param      v1     { parameter_description }.
      * @param      w     { parameter_description }.
      *
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(final int v, final int w) {
-        for (int i: adj[v]) {
+    public boolean hasEdge(final int v1, final int w) {
+        for (int i: adj[v1]) {
             if (i == w) {
                 return true;
             }

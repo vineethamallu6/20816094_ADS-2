@@ -47,8 +47,5 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:46:32: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:83:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 [ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:92:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:125:35: 'v' hides a field. [HiddenField]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:142:44: 'v' hides a field. [HiddenField]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:153:38: 'v' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 20 errors.
+Checkstyle ends with 17 errors.
