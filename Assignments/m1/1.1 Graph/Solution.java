@@ -1,18 +1,72 @@
 import java.util.Scanner;
+/**
+ * Interface for graph.
+ */
 interface Graph {
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int V();
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int E();
+    /**
+     * Adds an edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     */
     public void addEdge(int v, int w);
+    /**
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<Integer> adj(int v);
+    /**
+     * Determines if it has edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     True if has edge, False otherwise.
+     */
     public boolean hasEdge(int v, int w);
 }
+/**
+ * Class for graph adt.
+ */
 class GraphADT implements Graph{
+    /**
+     * { var_description }
+     */
     private int v;
+    /**
+     * { var_description }
+     */
     private int e;
+    /**
+     * { var_description }
+     */
     private Bag<Integer>[] adj;
+    /**
+     * Constructs the object.
+     */
     GraphADT() {
 
     }
+    /**
+     * Constructs the object.
+     *
+     * @param      v1    The v 1
+     */
     GraphADT(int v1) {
         this.v = v1;
         this.e = 0;
@@ -21,22 +75,53 @@ class GraphADT implements Graph{
             adj[i] = new Bag<Integer>();
         }
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int V() {
         return v;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public int E() {
         return e;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
      public int vertices() {
         return v;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
      public int edges() {
         return e;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Bag<Integer>[] getadj() {
         return adj;
     }
+    /**
+     * Adds an edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     */
     public void addEdge(int v, int w) {
     	if (v == w) {
     		return;
@@ -47,9 +132,24 @@ class GraphADT implements Graph{
         adj[v].add(w);
         adj[w].add(v);
     }
+    /**
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<Integer> adj(int v) {
         return adj[v];
     }
+    /**
+     * Determines if it has edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     True if has edge, False otherwise.
+     */
     public boolean hasEdge(int v, int w) {
     	for (int i: adj[v]) {
     		if (i == w) {
@@ -58,6 +158,15 @@ class GraphADT implements Graph{
     	}
     	return false;
     }
+    /**
+     * { function_description }
+     *
+     * @param      v1         The v 1
+     * @param      e1         The e 1
+     * @param      tokens     The tokens
+     *
+     * @throws     Exception  { exception_description }
+     */
 public void listDisplay(final int v1, final int e1, final String[] tokens) throws Exception {
 	if (e1 <= 1 && v1 <= 1) {
 		System.out.println(vertices() + " vertices" + ", " + edges() + " edges");
@@ -75,6 +184,14 @@ public void listDisplay(final int v1, final int e1, final String[] tokens) throw
 	}
 
 }
+/**
+ * { function_description }
+ *
+ * @param      v1         The v 1
+ * @param      e1         The e 1
+ *
+ * @throws     Exception  { exception_description }
+ */
 public void matrixDisplay(final int v1, final int e1) throws Exception {
         if (e1 <= 1 && v1 <= 1) {
             System.out.println(vertices() + " vertices" + ", "
@@ -101,11 +218,22 @@ public void matrixDisplay(final int v1, final int e1) throws Exception {
         }
     }
 }
+/**
+ * Class for solution.
+ */
 
 class Solution {
+    /**
+     * Constructs the object.
+     */
 	Solution() {
 
 	}
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		GraphADT gd = new GraphADT();
