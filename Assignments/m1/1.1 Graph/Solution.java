@@ -8,20 +8,20 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }.
      */
-    public int V();
+    int getVertices();
     /**
      * { function_description }.
      *
      * @return     { description_of_the_return_value }.
      */
-    public int E();
+    int getEdges();
     /**
      * Adds an edge.
      *
      * @param      v     { parameter_description }.
      * @param      w     { parameter_description }.
      */
-    public void addEdge(final int v, final int w);
+    void addEdge(final int v, final int w);
     /**
      * { function_description }
      *
@@ -29,7 +29,7 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }.
      */
-    public Iterable<Integer> adj(final int v);
+    Iterable<Integer> adj(final int v);
     /**
      * Determines if it has edge.
      *
@@ -38,12 +38,12 @@ interface Graph {
      *
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(final int v, final int w);
+    boolean hasEdge(final int v, final int w);
 }
 /**
  * Class for graph adt.
  */
-class GraphADT implements Graph{
+class GraphADT implements Graph {
     /**
      * { var_description }.
      */
@@ -80,7 +80,7 @@ class GraphADT implements Graph{
      *
      * @return     { description_of_the_return_value }.
      */
-    public int V() {
+    public int getVertices() {
         return v;
     }
     /**
@@ -89,7 +89,7 @@ class GraphADT implements Graph{
      * @return     { description_of_the_return_value }.
      */
 
-    public int E() {
+    public int getEdges() {
         return e;
     }
     /**
