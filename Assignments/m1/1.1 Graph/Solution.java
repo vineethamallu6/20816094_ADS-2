@@ -225,11 +225,11 @@ public void matrixDisplay(final int v1, final int e1) throws Exception {
  * Class for solution.
  */
 
-class Solution {
+public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    protected Solution() {
 
     }
     /**
@@ -253,14 +253,14 @@ class Solution {
         for (int i = 0; i < edges; i++) {
             String[] tokens = scan.nextLine().split(" ");
             //System.out.println(Arrays.toString(tokens));
-            gd.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+            gd.addEdge(Integer.parseInt(tokens[0]),
+                Integer.parseInt(tokens[1]));
         }
         switch (type) {
             case "List":
             try {
                 gd.listDisplay(vertices, edges, line);
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
             break;
