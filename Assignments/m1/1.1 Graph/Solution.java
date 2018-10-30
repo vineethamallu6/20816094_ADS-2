@@ -21,7 +21,7 @@ interface Graph {
      * @param      v     { parameter_description }.
      * @param      w     { parameter_description }.
      */
-    public void addEdge(final int v, final int w);
+    void addEdge(int v, int w);
     /**
      * { function_description }.
      *
@@ -29,7 +29,7 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }.
      */
-    public Iterable<Integer> adj(final int v);
+    Iterable<Integer> adj(int v);
     /**
      * Determines if it has edge.
      *
@@ -38,7 +38,7 @@ interface Graph {
      *
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(final int v, final int w);
+    boolean hasEdge(int v, int w);
 }
 /**
  * Class for graph adt.

@@ -31,13 +31,5 @@ Audit done.
 Checkstyle ends with 28 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:24:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:24:25: Redundant 'final' modifier. [RedundantModifier]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:24:38: Redundant 'final' modifier. [RedundantModifier]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:32:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:32:34: Redundant 'final' modifier. [RedundantModifier]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:41:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:41:28: Redundant 'final' modifier. [RedundantModifier]
-[ERROR] E:\20186094_ADS-2\Assignments\m1\1.1 Graph\Solution.java:41:41: Redundant 'final' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 1 errors.
