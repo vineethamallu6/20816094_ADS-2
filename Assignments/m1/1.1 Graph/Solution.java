@@ -63,7 +63,7 @@ public void listDisplay(final int v1, final int e1, final String[] tokens) throw
 		System.out.println(vertices() + " vertices" + ", " + edges() + " edges");
 		throw new Exception("No edges");
 	} else {
-		System.out.println(vertices() + " vertices" + ", " + edges() + "edges");
+		System.out.println(vertices() + " vertices" + ", " + edges() + " edges");
 		for (int i = 0; i < tokens.length; i++) {
 			String str = "";
 			str = tokens[i] + ": ";
