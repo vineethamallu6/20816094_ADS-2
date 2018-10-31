@@ -1,5 +1,28 @@
 Starting audit...
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:4: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:5:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:6:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:9: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:10:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:11:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:46:21: Parameter item should be final. [FinalParameters]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:56: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:58: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:65: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:66:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:68:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:68:9: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:68:29: Parameter first should be final. [FinalParameters]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:68:40: 'first' hides a field. [HiddenField]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:72: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:72:35: '{' at column 35 should have line break after. [LeftCurly]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:73: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:73:35: '{' at column 35 should have line break after. [LeftCurly]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:75:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\Bag.java:76: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
+Checkstyle ends with 22 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\CC.java:1: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\20186094_ADS-2\Assignments\m2\2.1 CC_Percolation\CC.java:2:5: Missing a Javadoc comment. [JavadocVariable]
