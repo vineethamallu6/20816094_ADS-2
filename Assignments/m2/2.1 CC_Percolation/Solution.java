@@ -1,87 +1,171 @@
 import java.util.Scanner;
-class Graph {
-    /**
-     *the tokens array is to.
-     *store all the keys.
-     */
-    //private String[] tokens;
-    /**
-     *matrix to store the realtion.
-     *between two vertices.
-     */
-    private int[][] matrix;
-    /**
-     *the variable to store number.
-     *of vertices.
-     */
-    private int vertices;
-    /**
-     *the variable to store edges of graph.
-     */
-    private int edges;
-    /**
-     *the constructor to initialize the class variables.
-     */
-    Graph(final int v) {
-    	matrix = new int[v+2][v+2];
-        //edges = 0;
+/**
+ * Class for percolation.
+ */
+class Percolation {
+  /**
+   * declaration of wqu.
+   */
+  private Graph g;
+  /**
+   * declaration of n.
+   */
+  private int n;
+  /**
+   * declaration of size.
+   */
+  private int size;
+  /**
+   * declaration of first.
+   */
+  private int first;
+  /**
+   * declaration of last.
+   */
+  private int last;
+  /**
+   * declaration of connected.
+   */
+  private boolean[] connected;
+  /**
+   * declaration of count.
+   */
+  private int count;
+  /**
+   * Constructs the object.
+   *
+   * @param      n1    The n 1
+   */
+   Percolation(final int n1) {
+    this.n = n1;
+    this.count = 0;
+    this.size = n1 * n1;
+    this.first = size;
+    this.last = size + 1;
+    connected = new boolean[size];
+    g = new Graph(size + 2);
+    for (int i = 0; i < n; i++) {
+      g.addEdge(first, i);
+      g.addEdge(last, size - i - 1);
     }
+   }
+   /**
+    * Searches for the first match.
+    *
+    * @param      i     { parameter_description }
+    * @param      j     { parameter_description }
+    *
+    * @return     { description_of_the_return_value }
+    */
+   public int indexOf(final int i, final int j) {
+      return n * (i - 1) + j - 1;
+   }
+   /**
+    * Links open sites.
+    *
+    * @param      row   The row
+    * @param      col   The col
+    */
+   private void linkOpenSites(final int row, final int col) {
+    if (connected[col] && !g.hasEdge(row, col)) {
+      g.addEdge(row, col);
+    }
+   }
+   /**
+    * numberOfOpenSites.
+    *
+    * @return     { description_of_the_return_value }
+    */
+   public int numberOfOpenSites() {
+    return count;
+   }
+   /**
+    * open.
+    *
+    * @param      row   The row
+    * @param      col   The col
+    */
+   public void open(final int row, final int col) {
+    int index = indexOf(row, col);
+    connected[index] = true;
+    count++;
+    int bottom = index + n;
+    int top = index - n;
+    if (n == 1) {
+      g.addEdge(first, index);
+      g.addEdge(last, index);
 
-     public int vertices() {
-        return vertices;
     }
-    /**
-     *the method is to add an edge between two vertices.
-     * @param      vertexOne  The vertex one
-     * @param      vertexTwo  The vertex two
-     * because we use has next method.
-     */
-    public void addEdge(final int vertexOne, final int vertexTwo) {
-        if (vertexOne != vertexTwo) {
-            if (!hasEdge(vertexOne, vertexTwo)) {
-                matrix[vertexOne][vertexTwo] = 1;
-                matrix[vertexTwo][vertexOne] = 1;
-                edges++;
-            }
-        }
+    if (bottom < size) {
+      linkOpenSites(index, bottom);
     }
-    /**
-     *the method is check whether there is a connection between two given.
-     *vertices the time complexity is O(1)
-     * @param      vertexOne  The vertex one
-     * @param      vertexTwo  The vertex two
-     *
-     * @return     True if has edge, False otherwise.
-     */
-    public boolean hasEdge(final int vertexOne, final int vertexTwo) {
-        if (matrix[vertexOne][vertexTwo] == 1) {
-            return true;
-        }
-        return false;
+    if (top >= 0) {
+      linkOpenSites(index, top);
     }
-    /**
-     *the method is to printMat the string format of graph the time complexity
-     *will be O(N^2)
-     *N is the vertices here.
-     */
+    if (col == 1) {
+      if (col != n) {
+        linkOpenSites(index, index + 1);
+      }
+      return;
+    }
+    if (col == n) {
+      linkOpenSites(index, index - 1);
+      return;
+    }
+    linkOpenSites(index, index + 1);
+    linkOpenSites(index, index - 1);
 
-    public int[] adj(final int v) {
-        return matrix[v];
-    }
+
+   }
+   /**
+    * Determines if open.
+    *
+    * @param      row   The row
+    * @param      col   The col
+    *
+    * @return     True if open, False otherwise.
+    */
+   public boolean isOpen(final int row, final int col) {
+    return connected[indexOf(row, col)];
+   }
+   /**
+    * percolates.
+    *
+    * @return     { description_of_the_return_value }
+    */
+   public boolean percolates() {
+    CC cc = new CC(g);
+    return cc.connected(first, last);
+   }
 }
-
+/**
+ * class Solution.
+ */
 public final class Solution {
-	private Solution() {
-	}
-		public static void main(String[] args) {
-			Scanner scan = new Scanner(System.in);
-			int n = Integer.parseInt(scan.nextLine());
-			Graph p = new Graph(n);
-			while (scan.hasNext()) {
-				String[] tokens = scan.nextLine().split(" ");
-				p.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-			}
-			CC c = new CC(p, n);
-			System.out.println(c.percolate());
-		}
-	}
+  /**
+   * Constructs the object.
+   */
+
+  private Solution() {
+
+  }
+  /**
+   * main function.
+   *
+   * @param      args  The arguments
+   */
+
+  public static void main(final String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = Integer.parseInt(sc.nextLine());
+    Percolation p = new Percolation(n);
+    while (sc.hasNext()) {
+      String[] tokens = sc.nextLine().split(" ");
+      p.open(Integer.parseInt(tokens[0]),
+        Integer.parseInt(tokens[1]));
+    }
+    System.out.println(p.percolates()
+      && p.numberOfOpenSites() != 0);
+
+  }
+}
