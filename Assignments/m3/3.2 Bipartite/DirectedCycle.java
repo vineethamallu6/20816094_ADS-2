@@ -33,10 +33,10 @@ public class DirectedCycle {
      */
     public DirectedCycle(final Graph graph) {
         this.vertices = 0;
-        marked  = new boolean[graph.V()];
-        onStack = new boolean[graph.V()];
-        edgeTo  = new int[graph.V()];
-        for (int v = 0; v < graph.V(); v++) {
+        marked  = new boolean[graph.vertices()];
+        onStack = new boolean[graph.vertices()];
+        edgeTo  = new int[graph.vertices()];
+        for (int v = 0; v < graph.vertices(); v++) {
             if (!marked[v] && cycle == null) dfs(graph, v);
         }
     }
