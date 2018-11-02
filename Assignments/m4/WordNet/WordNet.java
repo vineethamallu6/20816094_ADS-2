@@ -2,6 +2,7 @@ import java.util.Arrays;
 public class WordNet {
     // private String[] synString;
     // private String[] hypString;
+    private int vertices;
     private LinearProbingHashST <String, Integer> lb;
 
     // constructor takes the name of the two input files
@@ -11,8 +12,6 @@ public class WordNet {
         // readHyperToString(hypernyms);
     }
     public void readFilestoString(String str, String hype) {
-
-        int vertices = 0;;
         //String[] word = null;
         int id = 0;
         try {
@@ -45,6 +44,15 @@ void readHyperToString(String hype, Digraph obj) {
 
         }
         DirectedCycle dc = new DirectedCycle(obj);
+        int count = 0;
+        for (int i = 0; i < vertices; i++) {
+        	if (obj.outdegree(i) == 0) {
+        		count++;
+        	}
+        }
+        if (count > 1) {
+        	throw new IllegalArgumentException("Multiple roots");
+        }
         if (dc.hasCycle()) {
             System.out.println("Cycle detected");
         } else {
