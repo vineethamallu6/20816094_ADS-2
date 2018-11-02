@@ -27,7 +27,7 @@ public class WordNet {
         Digraph d = new Digraph(vertices);
         readHyperToString(hype, d);
     } catch (Exception e) {
-        System.out.println("File not found");
+        System.out.println(e.getMessage());
     }
 }
 
