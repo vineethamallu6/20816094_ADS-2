@@ -16,7 +16,7 @@ public class WordNet {
         //String[] word = null;
         int id = 0;
         try {
-            In in = new In(str);
+            In in = new In("./Files/" + str);
             while (!in.isEmpty()) {
             vertices++;
             String[] tokens = in.readString().split(",");
@@ -34,7 +34,7 @@ public class WordNet {
 
 void readHyperToString(String hype, Digraph obj) {
     try {
-        In in = new In(hype);
+        In in = new In("./Files/" + hype);
         while (!in.isEmpty()) {
             String[] str = in.readString().split(",");
             int v = Integer.parseInt(str[0]);
