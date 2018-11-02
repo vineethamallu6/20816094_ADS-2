@@ -41,7 +41,14 @@ void readHyperToString(String hype, Digraph obj) {
             int w = Integer.parseInt(str[1]);
             obj.addEdge(v, w);
         }
-        System.out.println(obj);
+        DirectedCycle dc = new DirectedCycle(obj);
+        if (dc.hasCycle()) {
+            System.out.println("Cycle detected");
+        } else {
+            System.out.println(obj);
+        }
+        //System.out.println(obj);
+
     } catch (Exception e) {
 
     }
