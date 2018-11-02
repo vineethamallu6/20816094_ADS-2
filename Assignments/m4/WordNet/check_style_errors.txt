@@ -423,9 +423,11 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:6:33: Parameter args should be final. [FinalParameters]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:28: Line is longer than 80 characters (found 140). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:24: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:26: Line is longer than 80 characters (found 111). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:28: Line is longer than 80 characters (found 156). [LineLength]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 9 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
