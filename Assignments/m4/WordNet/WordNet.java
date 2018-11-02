@@ -61,6 +61,7 @@ void readHyperToString(String hype, Digraph obj) {
         //System.out.println(obj);
 
     } catch (Exception e) {
+    	System.out.println(e.getMessage());
 
     }
 }

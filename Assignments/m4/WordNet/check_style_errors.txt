@@ -564,9 +564,9 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:34:24: Parameter hype should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:34:37: Parameter obj should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:42:13: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:74:1: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'isNoun' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'isNoun' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:74:1: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:74:23: Parameter word should be final. [FinalParameters]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:82: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:75:1: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'isNoun' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'isNoun' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:75:1: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:75:23: Parameter word should be final. [FinalParameters]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:83: Line is longer than 80 characters (found 95). [LineLength]
 Audit done.
 Checkstyle ends with 22 errors.
