@@ -12,23 +12,26 @@ class Solution {
 		try {
 			if (token.equals("Graph")) {
 				WordNet wn = new WordNet(synFile, hyperFile);
+				wn.display();
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		try {
 		if (token.equals("Queries")) {
+			WordNet wnq = new WordNet(synFile, hyperFile);
+			while (StdIn.hasNextLine()) {
 			String[] array = StdIn.readString().split(" ");
 			if (array[0].equals("null")) {
 				System.out.println("IllegalArgumentException");
 			}
+			System.out.println("distane = " + wnq.distance(array[0], array[1]) + ", ancestor = " + wnq.sap(array[0], array[1]));
 		}
-		// switch(token) {
-		// 	case "Graph":
-		// 	break;
-		// 	case "Queries":
-		// 	break;
-		// 	default:
-		// 	break;
-		}
+	}
+} catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+}
+
 
 	}
