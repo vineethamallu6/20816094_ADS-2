@@ -398,6 +398,7 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:6:24: Name 'G' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:12:5: Class 'SAP' looks like designed for extension (can be subclassed), but the method 'length' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'SAP' final or making the method 'length' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:12:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:29:26: '<' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:43: Line is longer than 80 characters (found 102). [LineLength]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:44:5: Class 'SAP' looks like designed for extension (can be subclassed), but the method 'ancestor' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'SAP' final or making the method 'ancestor' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:44:5: Missing a Javadoc comment. [JavadocMethod]
@@ -414,7 +415,7 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:98:25: Parameter v should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\SAP.java:98:46: Parameter w should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 25 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:2: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]

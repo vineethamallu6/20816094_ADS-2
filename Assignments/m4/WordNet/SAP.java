@@ -22,16 +22,16 @@ public class SAP {
         if (bfs[w] == null) {
             bfs[w] = new BreadthFirstDirectedPaths(dg, w);
         }
-        int length = 0;
+        int length = Integer.MAX_VALUE;
         for (int i = 0; i < dg.V(); i++) {
             if (bfs[v].hasPathTo(i) && bfs[w].hasPathTo(i)) {
                 int len = bfs[v].distTo(i) + bfs[w].distTo(i);
-                if (len > 0) {
+                if (len <length) {
                     length = len;
                 }
             }
         }
-        if (length > 0) {
+        if (length != Integer.MAX_VALUE) {
             return length;
         } else {
             return -1;
@@ -63,7 +63,7 @@ public class SAP {
         for (int i = 0; i < dg.V(); i++) {
             if (bfs[v].hasPathTo(i) && bfs[w].hasPathTo(i)) {
                 int len = bfs[v].distTo(i) + bfs[w].distTo(i);
-                if (len > 0) {
+                if (len < length) {
                     length = len;
                     ancestor = i;
                 }
@@ -78,16 +78,16 @@ public class SAP {
         if (v == null || w == null) {
             throw new NullPointerException();
         }
-        int length = 0;
+        int length = Integer.MAX_VALUE;
         for (int i : v) {
             for (int j : w) {
                 int l = length(i, j);
-                if (l != -1) {
+                if (l != -1 && len < length) {
                     length = l;
                 }
             }
         }
-        if (length > -1) {
+        if (length != Integer.MAX_VALUE) {
             return length;
         } else {
             return -1;
@@ -100,7 +100,7 @@ public class SAP {
             throw new NullPointerException();
         }
 
-        int length = 0;
+        int length = Integer.MAX_VALUE;
         int ancestor = -1;
 
         for (int i : v) {
