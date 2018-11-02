@@ -2,7 +2,7 @@ import java.util.Arrays;
 public class WordNet {
     // private String[] synString;
     // private String[] hypString;
-    //private LinearProbing <String, Integer> lb;
+    private LinearProbingHashST <String, Integer> lb;
 
     // constructor takes the name of the two input files
     public WordNet(String synsets, String hypernyms) {
@@ -37,9 +37,12 @@ void readHyperToString(String hype, Digraph obj) {
         In in = new In("./Files/" + hype);
         while (!in.isEmpty()) {
             String[] str = in.readString().split(",");
-            int v = Integer.parseInt(str[0]);
-            int w = Integer.parseInt(str[1]);
-            obj.addEdge(v, w);
+            //int v = Integer.parseInt(str[0]);
+            //int w = Integer.parseInt(str[1]);
+            for (int i = 1; i < str.length; i++) {
+            	obj.addEdge(Integer.parseInt(str[0]), Integer.parseInt(str[i]));
+            }
+
         }
         DirectedCycle dc = new DirectedCycle(obj);
         if (dc.hasCycle()) {
@@ -60,16 +63,17 @@ void readHyperToString(String hype, Digraph obj) {
 //     }
 
 //     // is the word a WordNet noun?
-//     public boolean isNoun(String word) {
+public boolean isNoun(String word) {
+	return lb.contains(word);
 
-//     }
+}
 
 //     // distance between nounA and nounB (defined below)
-//     public int distance(String nounA, String nounB)
+//public int distance(String nounA, String nounB)
 
 //     // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
 //     // in a shortest ancestral path (defined below)
-//     public String sap(String nounA, String nounB)
+//public String sap(String nounA, String nounB)
 
 //     // do unit testing of this class
 //     public static void main(String[] args)
