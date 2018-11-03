@@ -18,11 +18,11 @@ public class Solution {
 		int n = Integer.parseInt(scan.nextLine());
 		int vertices = n;
 		Digraph d = new Digraph(n);
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++){
 			String[] tokens = scan.nextLine().split(" ");
 			int id = Integer.parseInt(tokens[0]);
 			for (int j = 1; j < tokens.length; j++) {
-				d.addEdge(id, Integer.parseInt(tokens[i]));
+				d.addEdge(id, Integer.parseInt(tokens[j]));
 			}
 		}
 		System.out.println(d.V() + " vertices, " + d.E() + " edges ");
