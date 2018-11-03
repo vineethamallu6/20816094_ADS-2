@@ -42,8 +42,8 @@ distance = 7, ancestor = entity
 distance = 10, ancestor = entity
 
 Your Output: 
--4
-null
+distane = 7, ancestor = entity
+distane = 10, ancestor = entity
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -56,8 +56,12 @@ distance = 7, ancestor = lipid lipide lipoid
 distance = 1, ancestor = animal_oil
 
 Your Output: 
--4
-null
+distane = 7, ancestor = macromolecule supermolecule
+distane = 7, ancestor = macromolecule supermolecule
+distane = 9, ancestor = macromolecule supermolecule
+distane = 8, ancestor = macromolecule supermolecule
+distane = 7, ancestor = lipid lipide lipoid
+distane = 1, ancestor = animal_oil
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -67,8 +71,9 @@ distance = 13, ancestor = thing
 distance = 2, ancestor = wax
 
 Your Output: 
--2
-null
+distane = 3, ancestor = wax
+distane = 13, ancestor = thing
+distane = 2, ancestor = wax
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -236,8 +241,23 @@ distance = 0, ancestor = era epoch
 distance = 8, ancestor = abstraction abstract_entity
 
 Your Output: 
--14
-null
+distane = 11, ancestor = whole unit
+distane = 8, ancestor = organism being
+distane = 14, ancestor = entity
+distane = 13, ancestor = object physical_object
+distane = 2, ancestor = decade decennary decennium
+distane = 8, ancestor = substance
+distane = 2, ancestor = port
+distane = 2, ancestor = letter letter_of_the_alphabet alphabetic_character
+distane = 2, ancestor = letter letter_of_the_alphabet alphabetic_character
+distane = 12, ancestor = person individual someone somebody mortal soul
+distane = 15, ancestor = abstraction abstract_entity
+distane = 0, ancestor = 9/11 9-11 September_11 Sept._11 Sep_11
+distane = 2, ancestor = digit figure
+distane = 13, ancestor = abstraction abstract_entity
+distane = 12, ancestor = abstraction abstract_entity
+distane = 0, ancestor = era epoch
+distane = 8, ancestor = abstraction abstract_entity
 ----------------------------------------
 
 ########## Testcase 14: Passed ##########

@@ -60,7 +60,7 @@ public class LinearProbingHashST<Key, Value> {
 
     // hash function for keys - returns value between 0 and M-1
     private int hash(Key key) {
-        return (11 * key.hashCode()) % m;
+        return (key.hashCode() & 0x7fffffff) % m;
     }
 
     // resizes the hash table to the given capacity by re-hashing all of the keys
@@ -95,7 +95,7 @@ public class LinearProbingHashST<Key, Value> {
         }
 
         // double table size if 50% full
-        if (n >= m / 2) resize(2 * m);
+        if (n >= m/2) resize(2*m);
 
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
@@ -161,7 +161,7 @@ public class LinearProbingHashST<Key, Value> {
         n--;
 
         // halves size of array if it's 12.5% full or less
-        if (n > 0 && n <= m / 8) resize(m / 2);
+        if (n > 0 && n <= m/8) resize(m/2);
 
         assert check();
     }
@@ -185,7 +185,7 @@ public class LinearProbingHashST<Key, Value> {
     private boolean check() {
 
         // check that hash table is at most 50% full
-        if (m < 2 * n) {
+        if (m < 2*n) {
             System.err.println("Hash table size m = " + m + "; array size n = " + n);
             return false;
         }
@@ -199,23 +199,5 @@ public class LinearProbingHashST<Key, Value> {
             }
         }
         return true;
-    }
-    public String display() {
-        if (keys.length == 0) {
-            String s = "{}";
-            return s;
-        }
-        String s = "{";
-        int i;
-        for (i = 0; i < keys.length - 1; i++) {
-            if (keys[i] != null)
-                s += keys[i] + ":" + vals[i] + ", ";
-        }
-        if (keys[i] != null)
-            s += keys[i] + ":" + vals[i];
-        else
-            s = s.substring(0, s.length() - 2);
-        s += "}";
-        return s;
     }
 }
