@@ -36,17 +36,17 @@ Your Output:
 14: 13
 ----------------------------------------
 
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 distance = 7, ancestor = entity
 distance = 10, ancestor = entity
 
 Your Output: 
-distane = 7, ancestor = entity
-distane = 10, ancestor = entity
+distance = 7, ancestor = entity
+distance = 10, ancestor = entity
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 distance = 7, ancestor = macromolecule supermolecule
 distance = 7, ancestor = macromolecule supermolecule
@@ -56,27 +56,27 @@ distance = 7, ancestor = lipid lipide lipoid
 distance = 1, ancestor = animal_oil
 
 Your Output: 
-distane = 7, ancestor = macromolecule supermolecule
-distane = 7, ancestor = macromolecule supermolecule
-distane = 9, ancestor = macromolecule supermolecule
-distane = 8, ancestor = macromolecule supermolecule
-distane = 7, ancestor = lipid lipide lipoid
-distane = 1, ancestor = animal_oil
+distance = 7, ancestor = macromolecule supermolecule
+distance = 7, ancestor = macromolecule supermolecule
+distance = 9, ancestor = macromolecule supermolecule
+distance = 8, ancestor = macromolecule supermolecule
+distance = 7, ancestor = lipid lipide lipoid
+distance = 1, ancestor = animal_oil
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 distance = 3, ancestor = wax
 distance = 13, ancestor = thing
 distance = 2, ancestor = wax
 
 Your Output: 
-distane = 3, ancestor = wax
-distane = 13, ancestor = thing
-distane = 2, ancestor = wax
+distance = 3, ancestor = wax
+distance = 13, ancestor = thing
+distance = 2, ancestor = wax
 ----------------------------------------
 
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 distance = 0, ancestor = b
 distance = 0, ancestor = c
@@ -85,14 +85,14 @@ distance = 0, ancestor = e
 distance = 0, ancestor = f
 
 Your Output: 
-distane = 0, ancestor = b
-distane = 0, ancestor = c
-distane = 0, ancestor = d
-distane = 0, ancestor = e
-distane = 0, ancestor = f
+distance = 0, ancestor = b
+distance = 0, ancestor = c
+distance = 0, ancestor = d
+distance = 0, ancestor = e
+distance = 0, ancestor = f
 ----------------------------------------
 
-########## Testcase 5: Failed ##########
+########## Testcase 5: Passed ##########
 Expected Output: 
 distance = 1, ancestor = b
 distance = 2, ancestor = c
@@ -106,19 +106,19 @@ distance = 2, ancestor = j
 distance = 1, ancestor = k
 
 Your Output: 
-distane = 1, ancestor = b
-distane = 2, ancestor = c
-distane = 4, ancestor = c
-distane = 3, ancestor = c
-distane = 4, ancestor = c
-distane = 4, ancestor = c
-distane = 3, ancestor = c
-distane = 3, ancestor = i
-distane = 2, ancestor = j
-distane = 1, ancestor = k
+distance = 1, ancestor = b
+distance = 2, ancestor = c
+distance = 4, ancestor = c
+distance = 3, ancestor = c
+distance = 4, ancestor = c
+distance = 4, ancestor = c
+distance = 3, ancestor = c
+distance = 3, ancestor = i
+distance = 2, ancestor = j
+distance = 1, ancestor = k
 ----------------------------------------
 
-########## Testcase 6: Failed ##########
+########## Testcase 6: Passed ##########
 Expected Output: 
 distance = 1, ancestor = b
 distance = 2, ancestor = c
@@ -129,16 +129,16 @@ distance = 3, ancestor = h
 distance = 1, ancestor = h
 
 Your Output: 
-distane = 1, ancestor = b
-distane = 2, ancestor = c
-distane = 2, ancestor = h
-distane = 5, ancestor = h
-distane = 4, ancestor = h
-distane = 3, ancestor = h
-distane = 1, ancestor = h
+distance = 1, ancestor = b
+distance = 2, ancestor = c
+distance = 2, ancestor = h
+distance = 5, ancestor = h
+distance = 4, ancestor = h
+distance = 3, ancestor = h
+distance = 1, ancestor = h
 ----------------------------------------
 
-########## Testcase 7: Failed ##########
+########## Testcase 7: Passed ##########
 Expected Output: 
 distance = 1, ancestor = b
 distance = 1, ancestor = c
@@ -152,16 +152,16 @@ distance = 3, ancestor = f
 distance = 4, ancestor = f
 
 Your Output: 
-distane = 1, ancestor = b
-distane = 1, ancestor = c
-distane = 1, ancestor = d
-distane = 1, ancestor = e
-distane = 2, ancestor = f
-distane = 3, ancestor = f
-distane = 3, ancestor = f
-distane = 3, ancestor = f
-distane = 3, ancestor = f
-distane = 4, ancestor = f
+distance = 1, ancestor = b
+distance = 1, ancestor = c
+distance = 1, ancestor = d
+distance = 1, ancestor = e
+distance = 2, ancestor = f
+distance = 3, ancestor = f
+distance = 3, ancestor = f
+distance = 3, ancestor = f
+distance = 3, ancestor = f
+distance = 4, ancestor = f
 ----------------------------------------
 
 ########## Testcase 8: Passed ##########
@@ -220,7 +220,7 @@ Your Output:
 IllegalArgumentException
 ----------------------------------------
 
-########## Testcase 13: Failed ##########
+########## Testcase 13: Passed ##########
 Expected Output: 
 distance = 11, ancestor = whole unit
 distance = 8, ancestor = organism being
@@ -241,23 +241,23 @@ distance = 0, ancestor = era epoch
 distance = 8, ancestor = abstraction abstract_entity
 
 Your Output: 
-distane = 11, ancestor = whole unit
-distane = 8, ancestor = organism being
-distane = 14, ancestor = entity
-distane = 13, ancestor = object physical_object
-distane = 2, ancestor = decade decennary decennium
-distane = 8, ancestor = substance
-distane = 2, ancestor = port
-distane = 2, ancestor = letter letter_of_the_alphabet alphabetic_character
-distane = 2, ancestor = letter letter_of_the_alphabet alphabetic_character
-distane = 12, ancestor = person individual someone somebody mortal soul
-distane = 15, ancestor = abstraction abstract_entity
-distane = 0, ancestor = 9/11 9-11 September_11 Sept._11 Sep_11
-distane = 2, ancestor = digit figure
-distane = 13, ancestor = abstraction abstract_entity
-distane = 12, ancestor = abstraction abstract_entity
-distane = 0, ancestor = era epoch
-distane = 8, ancestor = abstraction abstract_entity
+distance = 11, ancestor = whole unit
+distance = 8, ancestor = organism being
+distance = 14, ancestor = entity
+distance = 13, ancestor = object physical_object
+distance = 2, ancestor = decade decennary decennium
+distance = 8, ancestor = substance
+distance = 2, ancestor = port
+distance = 2, ancestor = letter letter_of_the_alphabet alphabetic_character
+distance = 2, ancestor = letter letter_of_the_alphabet alphabetic_character
+distance = 12, ancestor = person individual someone somebody mortal soul
+distance = 15, ancestor = abstraction abstract_entity
+distance = 0, ancestor = 9/11 9-11 September_11 Sept._11 Sep_11
+distance = 2, ancestor = digit figure
+distance = 13, ancestor = abstraction abstract_entity
+distance = 12, ancestor = abstraction abstract_entity
+distance = 0, ancestor = era epoch
+distance = 8, ancestor = abstraction abstract_entity
 ----------------------------------------
 
 ########## Testcase 14: Passed ##########

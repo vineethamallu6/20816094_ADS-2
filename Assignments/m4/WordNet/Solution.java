@@ -25,7 +25,7 @@ class Solution {
 					if (array[0].equals("null")) {
 						throw new IllegalArgumentException("IllegalArgumentException");
 					}
-					System.out.println("distane = " + wnq.distance(array[0], array[1]) + ", ancestor = " + wnq.sap(array[0], array[1]));
+					System.out.println("distance = " + wnq.distance(array[0], array[1]) + ", ancestor = " + wnq.sap(array[0], array[1]));
 				}
 			}
 		} catch (Exception e) {
