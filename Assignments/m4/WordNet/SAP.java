@@ -31,6 +31,8 @@ public class SAP {
                 }
             }
         }
+        bfs[v] = null;
+        bfs[w] = null;
         if (length != Integer.MAX_VALUE) {
             return length;
         } else {
@@ -69,6 +71,8 @@ public class SAP {
                 }
             }
         }
+        bfs[v] = null;
+        bfs[w] = null;
         return ancestor;
 
     }
@@ -82,7 +86,7 @@ public class SAP {
         for (int i : v) {
             for (int j : w) {
                 int l = length(i, j);
-                if (l != -1 && len < length) {
+                if (l != -1 && l < length) {
                     length = l;
                 }
             }

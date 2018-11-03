@@ -80,7 +80,11 @@ distance = 0, ancestor = e
 distance = 0, ancestor = f
 
 Your Output: 
--11
+distane = 0, ancestor = b
+distane = 0, ancestor = c
+distane = 0, ancestor = d
+distane = 0, ancestor = e
+distane = 0, ancestor = f
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -97,7 +101,16 @@ distance = 2, ancestor = j
 distance = 1, ancestor = k
 
 Your Output: 
--11
+distane = 1, ancestor = b
+distane = 2, ancestor = c
+distane = 4, ancestor = c
+distane = 3, ancestor = c
+distane = 4, ancestor = c
+distane = 4, ancestor = c
+distane = 3, ancestor = c
+distane = 3, ancestor = i
+distane = 2, ancestor = j
+distane = 1, ancestor = k
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -111,7 +124,13 @@ distance = 3, ancestor = h
 distance = 1, ancestor = h
 
 Your Output: 
--11
+distane = 1, ancestor = b
+distane = 2, ancestor = c
+distane = 2, ancestor = h
+distane = 5, ancestor = h
+distane = 4, ancestor = h
+distane = 3, ancestor = h
+distane = 1, ancestor = h
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -128,7 +147,16 @@ distance = 3, ancestor = f
 distance = 4, ancestor = f
 
 Your Output: 
--11
+distane = 1, ancestor = b
+distane = 1, ancestor = c
+distane = 1, ancestor = d
+distane = 1, ancestor = e
+distane = 2, ancestor = f
+distane = 3, ancestor = f
+distane = 3, ancestor = f
+distane = 3, ancestor = f
+distane = 3, ancestor = f
+distane = 4, ancestor = f
 ----------------------------------------
 
 ########## Testcase 8: Passed ##########
