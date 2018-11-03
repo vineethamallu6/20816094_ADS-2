@@ -27,7 +27,7 @@ public class Solution {
 		}
 		System.out.println(d.V() + " vertices, " + d.E() + " edges ");
 		for (int i = 0; i < vertices; i++) {
-			System.out.println(i + ": ");
+			System.out.print(i + ": ");
 			for (int j : d.adj(i)) {
 				System.out.print(j + " ");
 			}
