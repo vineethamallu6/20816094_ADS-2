@@ -29,7 +29,7 @@ public class Solution {
 		for (int i = 0; i < vertices; i++) {
 			System.out.println(i + ": ");
 			for (int j : d.adj(i)) {
-				System.out.println(j + " ");
+				System.out.print(j + " ");
 			}
 			System.out.println();
 		}
