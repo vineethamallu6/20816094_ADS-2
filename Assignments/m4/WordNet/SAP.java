@@ -31,8 +31,8 @@ public class SAP {
                 }
             }
         }
-        bfs[v] = null;
-        bfs[w] = null;
+        // bfs[v] = null;
+        // bfs[w] = null;
         if (length != Integer.MAX_VALUE) {
             return length;
         } else {
@@ -71,8 +71,8 @@ public class SAP {
                 }
             }
         }
-        bfs[v] = null;
-        bfs[w] = null;
+        // bfs[v] = null;
+        // bfs[w] = null;
         return ancestor;
 
     }
