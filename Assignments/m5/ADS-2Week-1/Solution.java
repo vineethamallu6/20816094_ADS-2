@@ -16,6 +16,7 @@ public class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int n = Integer.parseInt(scan.nextLine());
+		int vertices = n;
 		Digraph d = new Digraph(n);
 		for (int i = 0; i < n; i++) {
 			String[] tokens = scan.nextLine().split(" ");
@@ -25,6 +26,13 @@ public class Solution {
 			}
 		}
 		System.out.println(d.V() + " vertices, " + d.E() + " edges ");
+		for (int i = 0; i < vertices; i++) {
+			System.out.println(i + ": ");
+			for (int j : d.adj(i)) {
+				System.out.println(j + " ");
+			}
+			System.out.println();
+		}
 		// read the first line of the input to get the number of vertices
 
 		// iterate count of vertices times
