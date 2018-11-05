@@ -1,9 +1,20 @@
-//import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
+		//check style purpose.
 
 	}
-	public static void main(String[] args) {
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		//Scanner scan = new Scanner(System.in);
 		String synFile = StdIn.readLine();
 		String hyperFile = StdIn.readLine();
