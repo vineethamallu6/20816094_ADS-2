@@ -416,13 +416,14 @@ Starting audit...
 Audit done.
 Checkstyle ends with 18 errors.
 Starting audit...
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:4:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:35: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:37: Line is longer than 80 characters (found 111). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:39: Line is longer than 80 characters (found 157). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:34: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:36: Line is longer than 80 characters (found 111). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:38: Line is longer than 80 characters (found 109). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:38:109: '+' should be on a new line. [OperatorWrap]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:39: Line is longer than 80 characters (found 95). [LineLength]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 6 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

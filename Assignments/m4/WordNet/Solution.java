@@ -1,13 +1,12 @@
 /**
  * Class for solution.
  */
-class Solution {
+public final class Solution {
 	/**
 	 * Constructs the object.
 	 */
-	Solution() {
+	protected Solution() {
 		//check style purpose.
-
 	}
 	/**
 	 * main function.
@@ -36,11 +35,12 @@ class Solution {
 					if (array[0].equals("null")) {
 						throw new IllegalArgumentException("IllegalArgumentException");
 					}
-					System.out.println("distance = " + wnq.distance(array[0], array[1]) + ", ancestor = " + wnq.sap(array[0], array[1]));
+					System.out.println("distance = " + wnq.distance(array[0], array[1]) +
+						", ancestor = " + wnq.sap(array[0], array[1]));
 				}
 			}
 		} catch (Exception e) {
-		                System.out.println(e.getMessage());
+			System.out.println(e.getMessage());
 	    }
 	}
 }
