@@ -74,12 +74,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
-[ERROR] E:\20186094_ADS-2\Assignments\m7\1. MST\Solution.java:2: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\20186094_ADS-2\Assignments\m7\1. MST\Solution.java:5:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\20186094_ADS-2\Assignments\m7\1. MST\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\20186094_ADS-2\Assignments\m7\1. MST\Solution.java:12: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 4 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m7\1. MST\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] E:\20186094_ADS-2\Assignments\m7\1. MST\Stack.java:14: Line has trailing spaces. [RegexpSingleline]
