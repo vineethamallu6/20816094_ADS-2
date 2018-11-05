@@ -1,16 +1,36 @@
 import java.util.Arrays;
 import java.util.ArrayList;
+/**
+ * Class for word net.
+ */
 public class WordNet {
-    // private String[] synString;
-    // private String[] hypString;
+    /**
+     * { var_description }
+     */
     private int vertices;
+    /**
+     * { item_description }
+     */
     private LinearProbingHashST <String, ArrayList<Integer>> nounLb;
+    /**
+     * { var_description }
+     */
     private LinearProbingHashST <Integer, String> idLb;
+    /**
+     * { var_description }
+     */
     private Digraph dg;
+    /**
+     * { var_description }
+     */
     private SAP sp;
-
-    // constructor takes the name of the two input files
-    public WordNet(String synsets, String hypernyms) {
+    /**
+     * Constructs the object.
+     *
+     * @param      synsets    The synsets
+     * @param      hypernyms  The hypernyms
+     */
+    public WordNet(final String synsets, final String hypernyms) {
     	nounLb = new LinearProbingHashST<String, ArrayList<Integer>>();
     	idLb = new LinearProbingHashST<Integer, String>();
     	try {
@@ -107,7 +127,9 @@ public class WordNet {
 //     }
 // }
 
-//     // returns all WordNet nouns
+/**
+ * { function_description }
+ */
     public void display() {
     	DirectedCycle dc = new DirectedCycle(dg);
     	if (dc.hasCycle()) {
@@ -118,19 +140,37 @@ public class WordNet {
     		System.out.println(dg.toString());
     	}
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 public Iterable<String> nouns() {
 	return nounLb.keys();
 
 }
 
-//     // is the word a WordNet noun?
-public boolean isNoun(String word) {
+/**
+ * Determines if noun.
+ *
+ * @param      word  The word
+ *
+ * @return     True if noun, False otherwise.
+ */
+public boolean isNoun(final String word) {
 	return nounLb.contains(word);
 
 }
 
-//     // distance between nounA and nounB (defined below)
-public int distance(String nounA, String nounB) {
+/**
+ * { function_description }
+ *
+ * @param      nounA  The noun a
+ * @param      nounB  The noun b
+ *
+ * @return     { description_of_the_return_value }
+ */
+public int distance(final String nounA, final String nounB) {
 	if (!isNoun(nounA) || !isNoun(nounB)) {
 		throw new IllegalArgumentException();
 	}
@@ -139,9 +179,15 @@ public int distance(String nounA, String nounB) {
 	return sp.length(idA, idB);
 }
 
-//     // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
-//     // in a shortest ancestral path (defined below)
-public String sap(String nounA, String nounB) {
+/**
+ * { function_description }
+ *
+ * @param      nounA  The noun a
+ * @param      nounB  The noun b
+ *
+ * @return     { description_of_the_return_value }
+ */
+public String sap(final String nounA, final String nounB) {
 	if (!isNoun(nounA) || !isNoun(nounB)) {
             throw new IllegalArgumentException();
         }
@@ -152,7 +198,3 @@ public String sap(String nounA, String nounB) {
         return idLb.get(anc);
     }
 }
-
-//     // do unit testing of this class
-//     public static void main(String[] args)
-
