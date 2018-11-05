@@ -18,7 +18,9 @@ class PageRank {
         // for (int i = 0; i < dg.V(); i++) {
         //     lb.put(i, 0.25);
         // }
-        double initialVal = (1 / dg.V());
+        double v = (double) dg.V();
+
+        double initialVal = (1 / v);
         for (int i =0; i < dg.V(); i++) {
         	if (dg.indegree(i) == 0) {
         		pageMap.put(i, 0.0);
@@ -35,7 +37,7 @@ class PageRank {
                  for (int k : reversedg.adj(j)) {
                      double val = pageMap.get(k);
                      double p = dg.outdegree(k);
-                     temp += val / p;
+                     temp += (val / p);
                  }
                 pagerank[j] = temp;
             }
