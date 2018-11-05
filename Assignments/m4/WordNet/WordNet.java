@@ -152,6 +152,3 @@ public String sap(String nounA, String nounB) {
         return idLb.get(anc);
     }
 }
-
-//     // do unit testing of this class
-//     public static void main(String[] args)
