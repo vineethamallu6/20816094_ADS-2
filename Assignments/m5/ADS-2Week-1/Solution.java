@@ -99,11 +99,11 @@ class PageRank {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    protected Solution() {
         //check style purpose.
     }
     /**
@@ -173,3 +173,4 @@ public class Solution {
 
     }
 }
+
