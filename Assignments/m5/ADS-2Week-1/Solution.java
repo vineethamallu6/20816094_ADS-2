@@ -6,7 +6,7 @@ import java.util.Scanner;
  */
 class PageRank {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private static final int THOUSAND = 1000;
     /**
@@ -44,7 +44,7 @@ class PageRank {
         double v = (double) dg.V();
 
         double initialVal = (1 / v);
-        for (int i =0; i < dg.V(); i++) {
+        for (int i = 0; i < dg.V(); i++) {
             if (dg.indegree(i) == 0) {
                 pageMap.put(i, 0.0);
             } else {
@@ -83,13 +83,18 @@ class PageRank {
     }
 }
 
+// /**
+//  * Class for web search.
+//  */
+// class WebSearch {
+//     /**
+//      * Constructs the object.
+//      */
+//     WebSearch() {
 
-class WebSearch {
-    WebSearch() {
+//     }
 
-    }
-
-}
+// }
 
 /**
  * Class for solution.
@@ -168,4 +173,3 @@ public class Solution {
 
     }
 }
-
