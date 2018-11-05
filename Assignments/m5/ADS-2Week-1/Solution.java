@@ -30,7 +30,7 @@ class PageRank {
         }
         int rank;
         Double[] pagerank = new Double[dg.V()];
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 1; i < 1000; i++) {
             for (int j = 0; j < dg.V(); j++) {
                 double temp = 0.0;
                  //double temp1 = 0.0;
@@ -77,14 +77,24 @@ public class Solution {
 		Scanner scan = new Scanner(System.in);
 		int n = Integer.parseInt(scan.nextLine());
 		int vertices = n;
+		Digraph dg = new Digraph(n);
 		Digraph d = new Digraph(n);
 
 		for (int i = 0; i < n; i++){
 			String[] tokens = scan.nextLine().split(" ");
+			if (tokens.length == 1) {
 			int id = Integer.parseInt(tokens[0]);
-			for (int j = 1; j < tokens.length; j++) {
-				d.addEdge(id, Integer.parseInt(tokens[j]));
+			for (int j = 0; j < tokens.length; j++) {
+				if (i != j) {
+				d.addEdge(i, j);
 			}
+			}
+		} else {
+			for (int j = 1; j < tokens.length; j++) {
+				dg.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
+				d.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
+			}
+		}
 		}
 		System.out.println(d.toString());
 		// System.out.println(d.V() + " vertices, " + d.E() + " edges ");
