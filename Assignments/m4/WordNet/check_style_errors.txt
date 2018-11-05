@@ -416,10 +416,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 18 errors.
 Starting audit...
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:42: Line is longer than 80 characters (found 89). [LineLength]
 Audit done.
-Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
