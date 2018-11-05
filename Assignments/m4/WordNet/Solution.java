@@ -34,12 +34,12 @@ public final class Solution {
 					String[] array = StdIn.readLine().
 					split(" ");
 					if (array[0].equals("null")) {
-						throw new IllegalArgumentException
-						("IllegalArgumentException");
+					throw new IllegalArgumentException(
+					"IllegalArgumentException");
 					}
 					System.out.println("distance = "
-						+ wnq.distance(array[0], array[1])
-						+ ", ancestor = " + wnq.sap(array[0], array[1]));
+					+ wnq.distance(array[0], array[1])
+					+ ", ancestor = " + wnq.sap(array[0], array[1]));
 				}
 			}
 		} catch (Exception e) {
