@@ -30,7 +30,7 @@ class PageRank {
         }
         int rank;
         Double[] pagerank = new Double[dg.V()];
-        for (int i = 1; i < 1000; i++) {
+        for (int i = 0; i < 1000; i++) {
             for (int j = 0; j < dg.V(); j++) {
                 double temp = 0.0;
                  //double temp1 = 0.0;
