@@ -1,44 +1,58 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 class PageRank {
 	private Digraph dg;
-	private LinearProbingHashST<Integer, Double>  lb;
-	private int size = 0;
+	//private LinearProbingHashST<Integer, Double>  lb;
+	private Digraph reversedg;
+	private HashMap<Integer, Double> pageMap;
 	PageRank(Digraph d) {
 		this.dg = d;
-		lb = new LinearProbingHashST<Integer, Double>();
+		this.reversedg = d.reverse();
+		pageMap = new HashMap<Integer, Double>();
+		//lb = new LinearProbingHashST<Integer, Double>();
 	}
-	public void PageRank() {
+	public void pageRank() {
         // double prevpr = 0.25;
-        for (int i = 0; i < dg.V(); i++) {
-            lb.put(i, 0.25);
+        //
+        // for (int i = 0; i < dg.V(); i++) {
+        //     lb.put(i, 0.25);
+        // }
+        double initialVal = (1 / dg.V());
+        for (int i =0; i < dg.V(); i++) {
+        	if (dg.indegree(i) == 0) {
+        		pageMap.put(i, 0.0);
+        	} else {
+        		pageMap.put(i, initialVal);
+        	}
         }
+        int rank;
+        Double[] pagerank = new Double[dg.V()];
         for (int i = 0; i < 1000; i++) {
             for (int j = 0; j < dg.V(); j++) {
                 double temp = 0.0;
-                double temp1 = 0.0;
-                for (int k : dg.adj(j)) {
-                    //int cnt = 0;
-                    if (k == i) {
-                        temp = lb.get(k) / dg.outdegree(k) + 1;
-                        temp1 = temp1 + temp;
-                    } else {
-                        temp = lb.get(j) / dg.outdegree(j);
-                        temp1 = temp1 + temp;
-                    }
-                    //System.out.println(finaltemp);
-                }
-                lb.put(j, temp1);
+                 //double temp1 = 0.0;
+                 for (int k : reversedg.adj(j)) {
+                     double val = pageMap.get(k);
+                     double p = dg.outdegree(k);
+                     temp += val / p;
+                 }
+                pagerank[j] = temp;
             }
-        }
-    }
+            for (int n = 0; n < dg.V(); n++) {
+            	pageMap.put(n, pagerank[n]);
+            }
+         }
+     }
+
+    // }
     /**.
      * { function_description }
      */
-    public void string() {
-        for (int i : lb.keys()) {
+    public void tostring() {
+        for (int i = 0; i < dg.V(); i++) {
             String s = "";
-            s += String.valueOf(i) + " - " + lb.get(i);
+            s += String.valueOf(i) + " - " + pageMap.get(i);
             System.out.println(s);
         }
     }
@@ -80,8 +94,8 @@ public class Solution {
 		// 	System.out.println();
 		// }
 		PageRank p = new PageRank(d);
-		p.PageRank();
-	p.string();
+		p.pageRank();
+	p.tostring();
 		// read the first line of the input to get the number of vertices
 
 		// iterate count of vertices times
