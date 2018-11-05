@@ -83,18 +83,17 @@ public class Solution {
 		for (int i = 0; i < n; i++){
 			String[] tokens = scan.nextLine().split(" ");
 			if (tokens.length == 1) {
-			//int id = Integer.parseInt(tokens[0]);
-			for (int j = 0; j < n; j++) {
-				if (i != j) {
-				d.addEdge(i, j);
+				for (int j = 0; j < n; j++) {
+					if (i != j) {
+						dg.addEdge(i, j);
+					}
+				}
+			} else {
+				for (int j = 1; j < tokens.length; j++) {
+					dg.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
+					d.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
+				}
 			}
-			}
-		} else {
-			for (int j = 1; j < tokens.length; j++) {
-				dg.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
-				d.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
-			}
-		}
 		}
 		System.out.println(d.toString());
 		// System.out.println(d.V() + " vertices, " + d.E() + " edges ");
@@ -105,7 +104,7 @@ public class Solution {
 		// 	}
 		// 	System.out.println();
 		// }
-		PageRank p = new PageRank(d);
+		PageRank p = new PageRank(dg);
 		p.pageRank();
 	p.tostring();
 		// read the first line of the input to get the number of vertices

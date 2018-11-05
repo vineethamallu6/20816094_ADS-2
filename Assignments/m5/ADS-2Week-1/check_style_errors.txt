@@ -337,12 +337,12 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:76:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:76:33: Parameter args should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:83:44: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:94: Line is longer than 80 characters (found 101). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:95: Line is longer than 80 characters (found 100). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:100: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:111: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:118: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:128: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:93: Line is longer than 80 characters (found 109). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:94: Line is longer than 80 characters (found 108). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:99: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:110: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:117: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m5\ADS-2Week-1\Solution.java:127: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
 Checkstyle ends with 26 errors.
 Starting audit...
