@@ -1,19 +1,9 @@
-/**
- * Class for solution.
- */
-public final class Solution {
-    /**
-     * Constructs the object.
-     */
-    protected Solution() {
-        //check style purpose.
+//import java.util.Scanner;
+class Solution {
+    Solution() {
+
     }
-    /**
-     * main function.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         //Scanner scan = new Scanner(System.in);
         String synFile = StdIn.readLine();
         String hyperFile = StdIn.readLine();
@@ -31,20 +21,15 @@ public final class Solution {
             if (token.equals("Queries")) {
                 WordNet wnq = new WordNet(synFile, hyperFile);
                 while (StdIn.hasNextLine()) {
-                    String[] array = StdIn.readLine().
-                    split(" ");
+                    String[] array = StdIn.readLine().split(" ");
                     if (array[0].equals("null")) {
-                    throw new IllegalArgumentException(
-                    "IllegalArgumentException");
+                        throw new IllegalArgumentException("IllegalArgumentException");
                     }
-                    System.out.println("distance = "
-                    + wnq.distance(array[0], array[1])
-                    + ", ancestor = " + wnq.sap(array[0],
-                    array[1]));
+                    System.out.println("distance = " + wnq.distance(array[0], array[1]) + ", ancestor = " + wnq.sap(array[0], array[1]));
                 }
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+                        System.out.println(e.getMessage());
         }
     }
 }

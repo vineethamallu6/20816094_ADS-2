@@ -83,9 +83,15 @@ Starting audit...
 Audit done.
 Checkstyle ends with 25 errors.
 Starting audit...
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:3:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:6:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:6:29: Parameter args should be final. [FinalParameters]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:26: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:28: Line is longer than 80 characters (found 137). [LineLength]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 7 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\WordNet.java:1:8: Unused import - java.util.Arrays. [UnusedImports]
