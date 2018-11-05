@@ -83,8 +83,8 @@ public class Solution {
 		for (int i = 0; i < n; i++){
 			String[] tokens = scan.nextLine().split(" ");
 			if (tokens.length == 1) {
-			int id = Integer.parseInt(tokens[0]);
-			for (int j = 0; j < tokens.length; j++) {
+			//int id = Integer.parseInt(tokens[0]);
+			for (int j = 0; j < n; j++) {
 				if (i != j) {
 				d.addEdge(i, j);
 			}
