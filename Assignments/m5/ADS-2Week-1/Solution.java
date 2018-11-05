@@ -1,17 +1,36 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+/**
+ * Class for page rank.
+ */
 class PageRank {
+	/**
+	 * { var_description }
+	 */
 	private Digraph dg;
-	//private LinearProbingHashST<Integer, Double>  lb;
+	/**
+	 * { var_description }
+	 */
 	private Digraph reversedg;
+	/**
+	 * { var_description }
+	 */
 	private HashMap<Integer, Double> pageMap;
-	PageRank(Digraph d) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      d     { parameter_description }
+	 */
+	PageRank(final Digraph d) {
 		this.dg = d;
 		this.reversedg = d.reverse();
 		pageMap = new HashMap<Integer, Double>();
 		//lb = new LinearProbingHashST<Integer, Double>();
 	}
+	/**
+	 * { function_description }
+	 */
 	public void pageRank() {
         // double prevpr = 0.25;
         //
@@ -68,12 +87,22 @@ class WebSearch {
 
 }
 
-
+/**
+ * Class for solution.
+ */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 		//check style purpose.
 	}
-	public static void main(String[] args) {
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int n = Integer.parseInt(scan.nextLine());
 		int vertices = n;
