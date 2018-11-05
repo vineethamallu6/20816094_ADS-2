@@ -1,7 +1,5 @@
 Starting audit...
-[ERROR] E:\20186094_ADS-2\Assignments\m4\WordNet\Solution.java:11: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 1 errors.
 Files to process must be specified, found 0.
 Files to process must be specified, found 0.
 Files to process must be specified, found 0.
