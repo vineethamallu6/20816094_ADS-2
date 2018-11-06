@@ -1,9 +1,20 @@
 import java.util.Scanner;
 import java.util.HashMap;
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 	//check style.
 	}
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments.
+	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String[] integers = scan.nextLine().split(" ");
