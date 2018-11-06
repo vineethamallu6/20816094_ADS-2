@@ -15,7 +15,7 @@ class Solution {
 		for (int i = 0; i < str.length; i++) {
 			hash.put(str[i], i);
 		}
-		for (int i = 0; i < vertices; i++) {
+		for (int i = 0; i < edges; i++) {
 			String[] line = scan.nextLine().split(" ");
 			ewg.addEdge(new Edge(hash.get(line[0]), hash.get(line[1]), Double.parseDouble(line[2])));
 		}
