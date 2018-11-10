@@ -20,7 +20,7 @@ public class Solution {
 		switch (caseToGo) {
 		case "Graph":
 			//Print the Graph Object.
-		System.out.println(ewg.toString());
+		System.out.println(ewg);
 
 			break;
 
