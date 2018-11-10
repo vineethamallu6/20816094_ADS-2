@@ -48,10 +48,10 @@ public class Solution {
 		int des = Integer.parseInt(paths[2]);
 		DijkstraUndirectedSP dsup = new DijkstraUndirectedSP(ewg, sou);
 		double sum = 0;
-		if (dsup.hasPathTo(via)) {
-			sum = dsup.distTo(via);
-			if (dsup.hasPathTo(des)) {
-				sum = sum + dsup.distTo(des);
+		if (dsup.hasPathTo(des)) {
+			sum = dsup.distTo(des);
+			if (dsup.hasPathTo(via)) {
+				sum = sum + dsup.distTo(via);
 				System.out.println(sum);
 			}
 		} else {
