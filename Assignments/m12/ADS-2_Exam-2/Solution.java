@@ -47,8 +47,13 @@ public class Solution {
 		int via = Integer.parseInt(paths[1]);
 		int des = Integer.parseInt(paths[2]);
 		DijkstraUndirectedSP dsup = new DijkstraUndirectedSP(ewg, sou);
+		double sum = 0;
 		if (dsup.hasPathTo(des)) {
-			System.out.println(dsup.distTo(des));
+			sum = dsup.distTo(via);
+			if (dsup.hasPathTo(des)) {
+				sum = sum + dsup.distTo(des);
+				System.out.println(sum);
+			}
 		} else {
 		System.out.println("No Path Found.");
 	}

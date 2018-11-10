@@ -126,8 +126,8 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:4:33: Parameter args should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:12: Line is longer than 80 characters (found 123). [LineLength]
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:38: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:55: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:56: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:60: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:61: Line is longer than 80 characters (found 110). [LineLength]
 Audit done.
 Checkstyle ends with 10 errors.
 Starting audit...
