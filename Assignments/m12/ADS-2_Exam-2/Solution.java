@@ -42,6 +42,16 @@ public class Solution {
 			break;
 
 		case "ViaPaths":
+		String[] paths = scan.nextLine().split(" ");
+		int sou = Integer.parseInt(paths[0]);
+		int via = Integer.parseInt(paths[1]);
+		int des = Integer.parseInt(paths[2]);
+		DijkstraUndirectedSP dsup = new DijkstraUndirectedSP(ewg, sou);
+		if (dsup.hasPathTo(des)) {
+			System.out.println(dsup.distTo(des));
+		} else {
+		System.out.println("No Path Found.");
+	}
 			// Handle the case of ViaPaths, where three integers are given.
 			// First is the source and second is the via is the one where path should pass throuh.
 			// third is the destination.
