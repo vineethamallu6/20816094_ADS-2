@@ -49,11 +49,11 @@ public class Solution {
 		DijkstraUndirectedSP dsup = new DijkstraUndirectedSP(ewg, sou);
 		double sum = 0;
 		if (dsup.hasPathTo(des)) {
-			sum = dsup.distTo(des);
-			if (dsup.hasPathTo(via)) {
-				sum = sum + dsup.distTo(via);
-				System.out.println(sum);
-			}
+			//sum = dsup.distTo(des);
+			//if (dsup.hasPathTo(via)) {
+				//sum = sum + dsup.distTo(via);
+				System.out.println(dsup.distTo(des));
+
 		} else {
 		System.out.println("No Path Found.");
 	}
