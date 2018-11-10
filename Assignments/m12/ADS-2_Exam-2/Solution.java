@@ -25,6 +25,16 @@ public class Solution {
 			break;
 
 		case "DirectedPaths":
+		String[] path = scan.nextLine().split(" ");
+		int s = Integer.parseInt(path[0]);
+		int d = Integer.parseInt(path[1]);
+		DijkstraUndirectedSP dsp = new DijkstraUndirectedSP(ewg, s);
+		if (dsp.hasPathTo(d)) {
+                System.out.println(dsp.distTo(d));
+            } else {
+            	System.out.println("No Path Found");
+            }
+
 			// Handle the case of DirectedPaths, where two integers are given.
 			// First is the source and second is the destination.
 			// If the path exists print the distance between them.
