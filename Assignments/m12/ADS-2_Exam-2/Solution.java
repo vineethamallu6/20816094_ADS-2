@@ -48,7 +48,7 @@ public class Solution {
 		int des = Integer.parseInt(paths[2]);
 		DijkstraUndirectedSP dsup = new DijkstraUndirectedSP(ewg, sou);
 		double sum = 0;
-		if (dsup.hasPathTo(des)) {
+		if (dsup.hasPathTo(via)) {
 			sum = dsup.distTo(via);
 			if (dsup.hasPathTo(des)) {
 				sum = sum + dsup.distTo(des);
