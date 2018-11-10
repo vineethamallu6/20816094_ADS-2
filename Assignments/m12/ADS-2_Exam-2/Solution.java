@@ -32,7 +32,7 @@ public class Solution {
 		if (dsp.hasPathTo(d)) {
                 System.out.println(dsp.distTo(d));
             } else {
-            	System.out.println("No Path Found");
+            	System.out.println("No Path Found.");
             }
 
 			// Handle the case of DirectedPaths, where two integers are given.
