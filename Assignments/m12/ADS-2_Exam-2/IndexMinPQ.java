@@ -332,7 +332,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
         // delete and print each key
         while (!pq.isEmpty()) {
             int i = pq.delMin();
-           System.out.println((i + "vertices " + strings[i]) + "edges");
+           System.out.println((i + " " + strings[i]) );
         }
         System.out.println();
 

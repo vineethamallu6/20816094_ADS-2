@@ -113,9 +113,10 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\IndexMinPQ.java:323:29: Parameter args should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\IndexMinPQ.java:325: Line is longer than 80 characters (found 102). [LineLength]
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\IndexMinPQ.java:325:29: '{' is followed by whitespace. [NoWhitespaceAfter]
+[ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\IndexMinPQ.java:335:53: ')' is preceded with whitespace. [ParenPad]
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\IndexMinPQ.java:346:53: ')' is preceded with whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 105 errors.
+Checkstyle ends with 106 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\20186094_ADS-2\Assignments\m12\ADS-2_Exam-2\Solution.java:2: Missing a Javadoc comment. [JavadocType]
