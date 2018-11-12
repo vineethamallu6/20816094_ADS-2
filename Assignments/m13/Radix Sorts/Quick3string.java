@@ -1,3 +1,4 @@
+import java.util.Random;
 public class Quick3string {
     private static final int CUTOFF =  15;   // cutoff to insertion sort
 
