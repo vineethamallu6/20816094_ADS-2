@@ -7,12 +7,12 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int n = Integer.parseInt(scan.nextLine());
-		int[] lines = new int[n];
+		String[] lines = new String[n];
 		for (int i = 0; i < n; i++) {
-			lines[i] = Integer.parseInt(scan.nextLine());
+			lines[i] = scan.nextLine();
 		}
-		LSD m = new LSD();
-		m.sort(lines);
+		LSD l = new LSD();
+		l.sort(lines, lines[0].length());
 		System.out.println(Arrays.toString(lines));
 
 	}
