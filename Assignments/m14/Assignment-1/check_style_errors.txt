@@ -176,14 +176,10 @@ Audit done.
 Checkstyle ends with 29 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:3:33: Parameter args should be final. [FinalParameters]
-[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:22:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:36:9: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\SuffixArray.java:23: Line is longer than 80 characters (found 82). [LineLength]
 [ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\SuffixArray.java:25: Line is longer than 80 characters (found 113). [LineLength]

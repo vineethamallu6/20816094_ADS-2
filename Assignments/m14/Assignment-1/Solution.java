@@ -1,6 +1,20 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution {
-	public static void main(String[] args) {
+	/**
+	 * Constructs the object.
+	 */
+	protected Solution() {
+		//check style purpose.
+	}
+	/**
+	 * main method.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		String[] words = loadWords();
 		Scanner scan = new Scanner(System.in);
 		String input = scan.nextLine();
