@@ -175,9 +175,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 29 errors.
 Starting audit...
-[ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\SuffixArray.java:23: Line is longer than 80 characters (found 82). [LineLength]
 [ERROR] E:\20186094_ADS-2\Assignments\m14\Assignment-1\SuffixArray.java:25: Line is longer than 80 characters (found 113). [LineLength]
