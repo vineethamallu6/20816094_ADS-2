@@ -1,11 +1,31 @@
 public class TST<Value> {
-    private int n;              // size
-    private Node<Value> root;   // root of TST
+    /**
+     * { var_description }.
+     */
+    private int n;
+    /**
+     * { item_description }.
+     */
+    private Node<Value> root;
+    /**
+     * Class for node.
+     *
+     * @param      <Value>  The value.
+     */
 
     private static class Node<Value> {
-        private char c;                        // character
-        private Node<Value> left, mid, right;  // left, middle, and right subtries
-        private Value val;                     // value associated with string
+        /**
+         * { var_description }.
+         */
+        private char c;
+        /**
+         * { item_description }.
+         */
+        private Node<Value> left, mid, right;
+        /**
+         * val.
+         */
+        private Value val;
     }
 
     /**
@@ -16,7 +36,7 @@ public class TST<Value> {
 
     /**
      * Returns the number of key-value pairs in this symbol table.
-     * @return the number of key-value pairs in this symbol table
+     * @return the number of key-value pairs in this symbol table.
      */
     public int size() {
         return n;
@@ -31,7 +51,8 @@ public class TST<Value> {
      */
     public boolean contains(final String key) {
         if (key == null) {
-            throw new IllegalArgumentException("argument to contains() is null");
+            throw new IllegalArgumentException
+            ("argument to contains() is null");
         }
         return get(key) != null;
     }
@@ -39,31 +60,36 @@ public class TST<Value> {
     /**
      * Returns the value associated with the given key.
      * @param key the key
-     * @return the value associated with the given key if the key is in the symbol table
+     * @return the value associated with the given key.
+     * if the key is in the symbol table.
      *     and {@code null} if the key is not in the symbol table
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @throws IllegalArgumentException if {@code key} is {@code null}.
      */
     public Value get(final String key) {
         if (key == null) {
-            throw new IllegalArgumentException("calls get() with null argument");
+            throw new IllegalArgumentException
+            ("calls get() with null argument");
         }
-        if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
+        if (key.length() == 0) throw new IllegalArgumentException
+            ("key must have length >= 1");
         Node<Value> x = get(root, key, 0);
         if (x == null) return null;
         return x.val;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @param      x     { parameter_description }
+     * @param      x     { parameter_description }.
      * @param      key   The key
-     * @param      d     { parameter_description }
+     * @param      d     { parameter_description }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
-    private Node<Value> get(final Node<Value> x, final String key, final int d) {
+    private Node<Value> get(final Node<Value> x,
+        final String key, final int d) {
         if (x == null) return null;
-        if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
+        if (key.length() == 0) throw new
+            IllegalArgumentException("key must have length >= 1");
         char c = key.charAt(d);
         if      (c < x.c)              return get(x.left,  key, d);
         else if (c > x.c)              return get(x.right, key, d);
@@ -72,12 +98,14 @@ public class TST<Value> {
     }
 
     /**
-     * Inserts the key-value pair into the symbol table, overwriting the old value
+     * Inserts the key-value pair into the symbol.
+     * table, overwriting the old value.
      * with the new value if the key is already in the symbol table.
-     * If the value is {@code null}, this effectively deletes the key from the symbol table.
-     * @param key the key
-     * @param val the value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * If the value is {@code null}, this effectively deletes.
+     * the key from the symbol table.
+     * @param key the key.
+     * @param val the value.
+     * @throws IllegalArgumentException if {@code key} is {@code null}.
      */
     public void put(final String key, final Value val) {
         if (key == null) {
@@ -87,14 +115,14 @@ public class TST<Value> {
         root = put(root, key, val, 0);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @param      x     { parameter_description }
-     * @param      key   The key
-     * @param      val   The value
-     * @param      d     { parameter_description }
+     * @param      x     { parameter_description }.
+     * @param      key   The key.
+     * @param      val   The value.
+     * @param      d     { parameter_description }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
 
     private Node<Value> put(Node<Value> x, final String key, final Value val, int d) {
@@ -171,13 +199,15 @@ public class TST<Value> {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @param      x       { parameter_description }
-     * @param      prefix  The prefix
-     * @param      queue   The queue
+     * @param      x       { parameter_description }.
+     * @param      prefix  The prefix.
+     * @param      queue   The queue.
      */
-    private void collect(final Node<Value> x, final StringBuilder prefix, final Queue<String> queue) {
+    private void collect(final Node<Value> x,
+        final StringBuilder prefix,
+        final Queue<String> queue) {
         if (x == null) return;
         collect(x.left,  prefix, queue);
         if (x.val != null) queue.enqueue(prefix.toString() + x.c);
@@ -190,7 +220,7 @@ public class TST<Value> {
     /**
      * Returns all of the keys in the symbol table that match {@code pattern},
      * where . symbol is treated as a wildcard character.
-     * @param pattern the pattern
+     * @param pattern the pattern.
      * @return all of the keys in the symbol table that match {@code pattern},
      *     as an iterable, where . is treated as a wildcard character.
      */
