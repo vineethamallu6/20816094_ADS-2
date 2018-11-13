@@ -29,7 +29,7 @@ public class TST<Value> {
      *     {@code false} otherwise
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public boolean contains(String key) {
+    public boolean contains(final String key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to contains() is null");
         }
@@ -43,7 +43,7 @@ public class TST<Value> {
      *     and {@code null} if the key is not in the symbol table
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public Value get(String key) {
+    public Value get(final String key) {
         if (key == null) {
             throw new IllegalArgumentException("calls get() with null argument");
         }
@@ -54,7 +54,7 @@ public class TST<Value> {
     }
 
     // return subtrie corresponding to given key
-    private Node<Value> get(Node<Value> x, String key, int d) {
+    private Node<Value> get(final Node<Value> x, final String key, final int d) {
         if (x == null) return null;
         if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
         char c = key.charAt(d);
@@ -72,7 +72,7 @@ public class TST<Value> {
      * @param val the value
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public void put(String key, Value val) {
+    public void put(final String key, final Value val) {
         if (key == null) {
             throw new IllegalArgumentException("calls put() with null key");
         }
@@ -80,7 +80,7 @@ public class TST<Value> {
         root = put(root, key, val, 0);
     }
 
-    private Node<Value> put(Node<Value> x, String key, Value val, int d) {
+    private Node<Value> put(Node<Value> x, final String key, final Value val, int d) {
         char c = key.charAt(d);
         if (x == null) {
             x = new Node<Value>();
@@ -101,7 +101,7 @@ public class TST<Value> {
      *     or {@code null} if no such string
      * @throws IllegalArgumentException if {@code query} is {@code null}
      */
-    public String longestPrefixOf(String query) {
+    public String longestPrefixOf(final String query) {
         if (query == null) {
             throw new IllegalArgumentException("calls longestPrefixOf() with null argument");
         }
@@ -141,7 +141,7 @@ public class TST<Value> {
      *     as an iterable
      * @throws IllegalArgumentException if {@code prefix} is {@code null}
      */
-    public Iterable<String> keysWithPrefix(String prefix) {
+    public Iterable<String> keysWithPrefix(final String prefix) {
         if (prefix == null) {
             throw new IllegalArgumentException("calls keysWithPrefix() with null argument");
         }
@@ -154,7 +154,7 @@ public class TST<Value> {
     }
 
     // all keys in subtrie rooted at x with given prefix
-    private void collect(Node<Value> x, StringBuilder prefix, Queue<String> queue) {
+    private void collect(final Node<Value> x, final StringBuilder prefix, final Queue<String> queue) {
         if (x == null) return;
         collect(x.left,  prefix, queue);
         if (x.val != null) queue.enqueue(prefix.toString() + x.c);
@@ -171,13 +171,13 @@ public class TST<Value> {
      * @return all of the keys in the symbol table that match {@code pattern},
      *     as an iterable, where . is treated as a wildcard character.
      */
-    public Iterable<String> keysThatMatch(String pattern) {
+    public Iterable<String> keysThatMatch(final String pattern) {
         Queue<String> queue = new Queue<String>();
         collect(root, new StringBuilder(), 0, pattern, queue);
         return queue;
     }
 
-    private void collect(Node<Value> x, StringBuilder prefix, int i, String pattern, Queue<String> queue) {
+    private void collect(final Node<Value> x, final StringBuilder prefix, final int i, final String pattern, final Queue<String> queue) {
         if (x == null) return;
         char c = pattern.charAt(i);
         if (c == '.' || c < x.c) collect(x.left, prefix, i, pattern, queue);

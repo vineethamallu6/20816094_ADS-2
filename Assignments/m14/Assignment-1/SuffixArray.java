@@ -36,7 +36,7 @@ public class SuffixArray {
      * Initializes a suffix array for the given {@code text} string.
      * @param text the input string
      */
-    public SuffixArray(String text) {
+    public SuffixArray(final String text) {
         int n = text.length();
         this.suffixes = new Suffix[n];
         for (int i = 0; i < n; i++)
@@ -48,18 +48,18 @@ public class SuffixArray {
         private final String text;
         private final int index;
 
-        private Suffix(String text, int index) {
+        private Suffix(final String text, final int index) {
             this.text = text;
             this.index = index;
         }
         private int length() {
             return text.length() - index;
         }
-        private char charAt(int i) {
+        private char charAt(final int i) {
             return text.charAt(index + i);
         }
 
-        public int compareTo(Suffix that) {
+        public int compareTo(final Suffix that) {
             if (this == that) return 0;  // optimization
             int n = Math.min(this.length(), that.length());
             for (int i = 0; i < n; i++) {
@@ -90,7 +90,7 @@ public class SuffixArray {
      * @return the index into the original string of the <em>i</em>th smallest suffix
      * @throws java.lang.IllegalArgumentException unless {@code 0 <= i < n}
      */
-    public int index(int i) {
+    public int index(final int i) {
         if (i < 0 || i >= suffixes.length) throw new IllegalArgumentException();
         return suffixes[i].index;
     }
@@ -104,13 +104,13 @@ public class SuffixArray {
      * smallest suffix and the <em>i</em>-1st smallest suffix.
      * @throws java.lang.IllegalArgumentException unless {@code 1 <= i < n}
      */
-    public int lcp(int i) {
+    public int lcp(final int i) {
         if (i < 1 || i >= suffixes.length) throw new IllegalArgumentException();
         return lcpSuffix(suffixes[i], suffixes[i-1]);
     }
 
     // longest common prefix of s and t
-    private static int lcpSuffix(Suffix s, Suffix t) {
+    private static int lcpSuffix(final Suffix s, final Suffix t) {
         int n = Math.min(s.length(), t.length());
         for (int i = 0; i < n; i++) {
             if (s.charAt(i) != t.charAt(i)) return i;
@@ -124,7 +124,7 @@ public class SuffixArray {
      * @return the <em>i</em> smallest suffix as a string
      * @throws java.lang.IllegalArgumentException unless {@code 0 <= i < n}
      */
-    public String select(int i) {
+    public String select(final int i) {
         if (i < 0 || i >= suffixes.length) throw new IllegalArgumentException();
         return suffixes[i].toString();
     }
@@ -136,7 +136,7 @@ public class SuffixArray {
      * @param query the query string
      * @return the number of suffixes strictly less than {@code query}
      */
-    public int rank(String query) {
+    public int rank(final String query) {
         int lo = 0, hi = suffixes.length - 1;
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
@@ -149,7 +149,7 @@ public class SuffixArray {
     }
 
     // compare query string to suffix
-    private static int compare(String query, Suffix suffix) {
+    private static int compare(final String query, final Suffix suffix) {
         int n = Math.min(query.length(), suffix.length());
         for (int i = 0; i < n; i++) {
             if (query.charAt(i) < suffix.charAt(i)) return -1;
