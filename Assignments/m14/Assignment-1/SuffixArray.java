@@ -43,21 +43,49 @@ public class SuffixArray {
             suffixes[i] = new Suffix(text, i);
         Arrays.sort(suffixes);
     }
+    /**
+     * Class for suffix.
+     */
 
     private static class Suffix implements Comparable<Suffix> {
         private final String text;
         private final int index;
+        /**
+         * Constructs the object.
+         *
+         * @param      text   The text
+         * @param      index  The index
+         */
 
         private Suffix(final String text, final int index) {
             this.text = text;
             this.index = index;
         }
+        /**
+         * { function_description }
+         *
+         * @return     { description_of_the_return_value }
+         */
         private int length() {
             return text.length() - index;
         }
+        /**
+         * { function_description }.
+         *
+         * @param      i     { parameter_description }
+         *
+         * @return     { description_of_the_return_value }
+         */
         private char charAt(final int i) {
             return text.charAt(index + i);
         }
+        /**
+         * { function_description }.
+         *
+         * @param      that  The that
+         *
+         * @return     { description_of_the_return_value }
+         */
 
         public int compareTo(final Suffix that) {
             if (this == that) return 0;  // optimization
@@ -68,6 +96,11 @@ public class SuffixArray {
             }
             return this.length() - that.length();
         }
+        /**
+         * Returns a string representation of the object.
+         *
+         * @return     String representation of the object.
+         */
 
         public String toString() {
             return text.substring(index);
@@ -109,7 +142,14 @@ public class SuffixArray {
         return lcpSuffix(suffixes[i], suffixes[i-1]);
     }
 
-    // longest common prefix of s and t
+    /**
+     * { function_description }.
+     *
+     * @param      s     { parameter_description }
+     * @param      t     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private static int lcpSuffix(final Suffix s, final Suffix t) {
         int n = Math.min(s.length(), t.length());
         for (int i = 0; i < n; i++) {
@@ -148,7 +188,14 @@ public class SuffixArray {
         return lo;
     }
 
-    // compare query string to suffix
+    /**
+     * { function_description }.
+     *
+     * @param      query   The query
+     * @param      suffix  The suffix
+     *
+     * @return     { description_of_the_return_value }
+     */
     private static int compare(final String query, final Suffix suffix) {
         int n = Math.min(query.length(), suffix.length());
         for (int i = 0; i < n; i++) {
