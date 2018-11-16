@@ -1,14 +1,12 @@
-import java.util.Arrays;
-
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 
 	/**
 	 * Constructs the object.
 	 */
-	private Solution() {
+	protected Solution() {
 		// empty constructor
 	}
 
@@ -29,7 +27,8 @@ public class Solution {
 			String boardName = StdIn.readLine();
 			BoggleBoard board = new BoggleBoard("/Files/" + boardName);
 			int score = 0;
-			for (String word : solver.getAllValidWords(board)) {
+			for (String word :
+				solver.getAllValidWords(board)) {
 				score += solver.scoreOf(word);
 			}
 			StdOut.println("Score = " + score);
@@ -43,7 +42,8 @@ public class Solution {
 				solver = new BoggleSolver(dictionary);
 				board = null;
 				score = 0;
-				for (String word : solver.getAllValidWords(board)) {
+				for (String word :
+					solver.getAllValidWords(board)) {
 					score += solver.scoreOf(word);
 				}
 				StdOut.println("Score = " + score);
