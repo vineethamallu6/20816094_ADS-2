@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Solution {
@@ -107,7 +109,7 @@ public class Solution {
 
 
 class T9 {
-	private TST tst = null;
+	private TST<Integer> tst = null;
 	private BinarySearchST<String, Integer>  bst = null;
 
 	public T9(BinarySearchST<String, Integer> st) {
@@ -134,7 +136,17 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		// your code goes here
-		return null;
+		BinarySearchST<Integer, String> maxfrequency = new BinarySearchST<Integer, String>();
+		ArrayList<String> maximum = new ArrayList<String>();
+		for (String w : words) {
+			maxfrequency.put(tst.get(w), w);
+		}
+		for (int i = 0; i < k; i++) {
+			maximum.add(maxfrequency.get(maxfrequency.max()));
+			maxfrequency.deleteMax();
+		}
+		Collections.sort(maximum);
+		return maximum;
 	}
 
 	// final output
