@@ -111,8 +111,8 @@ class T9 {
 	private BinarySearchST<String, Integer>  bst = null;
 
 	public T9(BinarySearchST<String, Integer> st) {
-		bst = new BinarySearchST<String, Integer>();
-		TST tst = new TST<Integer>();
+		//bst = new BinarySearchST<String, Integer>();
+		tst = new TST<Integer>();
 		bst = st;
 		//tst = new TST<Integer>();
 		for (String w : bst.keys()) {

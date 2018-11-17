@@ -396,7 +396,6 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:113:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:113:9: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:113:19: Parameter st should be final. [FinalParameters]
-[ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:115:21: 'tst' hides a field. [HiddenField]
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:125:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:125:45: Parameter prefix should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:129:9: Missing a Javadoc comment. [JavadocMethod]
@@ -408,7 +407,7 @@ Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:142:36: Parameter t9Signature should be final. [FinalParameters]
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\Solution.java:142:56: Parameter k should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 32 errors.
+Checkstyle ends with 31 errors.
 Starting audit...
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\20186094_ADS-2\Assignments\m18\ADS-2Exam-3\TST.java:46: Line is longer than 80 characters (found 84). [LineLength]
