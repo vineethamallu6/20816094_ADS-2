@@ -23,7 +23,8 @@ public class Solution {
 		switch (cases) {
 		case "loadDictionary":
 			// input000.txt and output000.txt
-			BinarySearchST<String, Integer> hash = loadDictionary("/Files/t9.csv");
+			BinarySearchST<String, Integer> hash =
+			loadDictionary("/Files/t9.csv");
 			while (scan.hasNextLine()) {
 				String key = scan.nextLine();
 				System.out.println(hash.get(key));
@@ -47,7 +48,8 @@ public class Solution {
 			int count = 0;
 			while (scan.hasNextLine()) {
 				String t9Signature = scan.nextLine();
-				for (String each : t9.potentialWords(t9Signature)) {
+				for (String each
+					: t9.potentialWords(t9Signature)) {
 					count++;
 					System.out.println(each);
 				}
@@ -110,14 +112,17 @@ public class Solution {
 	 * @return     { description_of_the_return_value }.
 	 */
 
-	public static BinarySearchST<String, Integer> loadDictionary(final String file) {
-		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
+	public static BinarySearchST<String, Integer>
+	loadDictionary(final String file) {
+		BinarySearchST<String, Integer>  st =
+		 new BinarySearchST<String, Integer>();
 		String[] dictionary = toReadFile(file);
 		//TST tst = new TST();
 		for (int i = 0; i < dictionary.length; i++)  {
 			for (String word : dictionary[i].split(" ")) {
 				if (st.contains(word.toLowerCase())) {
-					st.put(word.toLowerCase(), st.get(word.toLowerCase()) + 1);
+					st.put(word.toLowerCase(),
+						st.get(word.toLowerCase()) + 1);
 				} else {
 					st.put(word.toLowerCase(), 1);
 				}
@@ -187,9 +192,11 @@ class T9 {
 	 *
 	 * @return     The suggestions.
 	 */
-	public Iterable<String> getSuggestions(final Iterable<String> words, final int k) {
+	public Iterable<String> getSuggestions(final Iterable<String> words,
+		final int k) {
 		// your code goes here
-		BinarySearchST<Integer, String> maxfrequency = new BinarySearchST<Integer, String>();
+		BinarySearchST<Integer, String> maxfrequency =
+		new BinarySearchST<Integer, String>();
 		ArrayList<String> maximum = new ArrayList<String>();
 		for (String w : words) {
 			maxfrequency.put(tst.get(w), w);
