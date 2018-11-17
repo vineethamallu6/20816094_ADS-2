@@ -1,12 +1,22 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
-
-
+/**
+ * Class for solution.
+ */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	Solution() {
 
-	// Don't modify this method.
-	public static void main(String[] args) {
+	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String cases = scan.nextLine();
 
@@ -82,12 +92,12 @@ public class Solution {
 	}
 
 	// Don't modify this method.
-	public static String[] toReadFile(String file) {
+	public static String[] toReadFile(final String file) {
 		In in = new In(file);
 		return in.readAllStrings();
 	}
 
-	public static BinarySearchST<String, Integer> loadDictionary(String file) {
+	public static BinarySearchST<String, Integer> loadDictionary(final String file) {
 		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
 		String[] dictionary = toReadFile(file);
 		//TST tst = new TST();
@@ -105,14 +115,25 @@ public class Solution {
 		return st;
 	}
 }
-
-
-
+/**
+ * Class for t 9.
+ */
 class T9 {
+	/**
+	 * { var_description }
+	 */
 	private TST<Integer> tst = null;
+	/**
+	 * { var_description }
+	 */
 	private BinarySearchST<String, Integer>  bst = null;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      st    { parameter_description }
+	 */
 
-	public T9(BinarySearchST<String, Integer> st) {
+	public T9(final BinarySearchST<String, Integer> st) {
 		//bst = new BinarySearchST<String, Integer>();
 		tst = new TST<Integer>();
 		bst = st;
@@ -122,19 +143,38 @@ class T9 {
 		}
 		// your code goes here
 	}
-
-	// get all the prefixes that match with given prefix.
-	public Iterable<String> getAllWords(String prefix) {
+/**
+ * Gets all words.
+ *
+ * @param      prefix  The prefix
+ *
+ * @return     All words.
+ */
+	public Iterable<String> getAllWords(final String prefix) {
 		return tst.keysWithPrefix(prefix);
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      t9Signature  The t 9 signature
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 
-	public Iterable<String> potentialWords(String t9Signature) {
+	public Iterable<String> potentialWords(final String t9Signature) {
 		// your code goes here
 		return null;
 	}
 
-	// return all possibilities(words), find top k with highest frequency.
-	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
+	/**
+	 * Gets the suggestions.
+	 *
+	 * @param      words  The words
+	 * @param      k      { parameter_description }
+	 *
+	 * @return     The suggestions.
+	 */
+	public Iterable<String> getSuggestions(final Iterable<String> words, final int k) {
 		// your code goes here
 		BinarySearchST<Integer, String> maxfrequency = new BinarySearchST<Integer, String>();
 		ArrayList<String> maximum = new ArrayList<String>();
@@ -149,9 +189,15 @@ class T9 {
 		return maximum;
 	}
 
-	// final output
-	// Don't modify this method.
-	public Iterable<String> t9(String t9Signature, int k) {
+	/**
+	 * { function_description }
+	 *
+	 * @param      t9Signature  The t 9 signature
+	 * @param      k            { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public Iterable<String> t9(final String t9Signature, final int k) {
 		return getSuggestions(potentialWords(t9Signature), k);
 	}
 }
