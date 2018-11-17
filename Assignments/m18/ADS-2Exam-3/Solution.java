@@ -151,7 +151,7 @@ class T9 {
      * @param      st    { parameter_description }
      */
 
-    public T9(final BinarySearchST<String, Integer> st) {
+     protected T9(final BinarySearchST<String, Integer> st) {
         //bst = new BinarySearchST<String, Integer>();
         tst = new TST<Integer>();
         bst = st;
@@ -221,3 +221,4 @@ class T9 {
         return getSuggestions(potentialWords(t9Signature), k);
     }
 }
+
