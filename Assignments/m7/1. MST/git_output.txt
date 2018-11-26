@@ -1,0 +1,10 @@
+[master 0389f99] "ads2_m7_a1_1: 6/6 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 5 files changed, 11 insertions(+), 627 deletions(-)
+ delete mode 100644 Assignments/m7/1. MST/Bag.java
+ delete mode 100644 Assignments/m7/1. MST/Queue.java
+ delete mode 100644 Assignments/m7/1. MST/Stack.java
+ rewrite Assignments/m7/1. MST/check_style_errors.txt (98%)
+ rewrite Assignments/m7/1. MST/result/score.json (76%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/vineethamallu6/20816094_ADS-2.git
+   dbc660f..0389f99  master -> master

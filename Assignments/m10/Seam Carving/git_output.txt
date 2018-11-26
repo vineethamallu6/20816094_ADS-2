@@ -1,0 +1,6 @@
+[master 46a1417] "ads2_m10_a1_1: 9/9 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ rewrite Assignments/m10/Seam Carving/result/score.json (82%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/vineethamallu6/20816094_ADS-2.git
+   9921826..46a1417  master -> master
